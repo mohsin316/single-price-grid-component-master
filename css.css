@@ -1,0 +1,132 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --yellow:hsl(71, 73%, 54%);
+    --lightgray:hsl(204, 43%, 93%);
+    --grayblue:hsl(218, 22%, 67%);
+
+    --cardtwo:#2BB3B1;
+    --cardthree:#4ABEBD;
+
+    --ff:'Karla', sans-serif;
+    --fwL:400;
+    --fwB:700;
+}
+
+
+body{
+    background-color: #E6EFF6;
+    font-family: var(--ff);
+    display: grid;
+    place-items: center;
+    padding: 5rem 1rem;
+}
+
+.container{
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.intro-container{
+    background-color: #FFFFFF;
+    padding: 2rem 1.5rem;
+}
+
+.intro-container h1{
+    color: var(--cyan);
+    font-size: clamp( 1.5rem, 4vw, 2rem);
+
+}
+
+.intro-container .payback{
+    color: var(--yellow);
+    padding-block: 2rem;
+    font-weight: var(--fwB);
+    font-size: clamp( 1rem, 1.5vw, 1.75rem);
+}
+
+.intro-container .intro{
+    color: var(--grayblue);
+    line-height: 1.75rem;
+    font-size: clamp(.9rem, 1.25vw, 2rem );
+}
+
+.pay-container{
+    background-color: var(--cardtwo);
+    padding: 2rem 1.5rem;
+    width: 100%;
+}
+
+h2{
+    color: var(--lightgray);
+    padding-bottom: 1.25rem ;
+    font-size: 1.25rem;
+}
+
+strong{
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--lightgray);
+    padding: 0 .5rem .5rem 0;
+}
+span{
+    display: inline-block;
+    color: #7ADEDC;
+    padding: 0 .5rem .5rem 0;
+}
+.pay-container p{
+    color: var(--lightgray);
+    margin-bottom: 2rem;
+}
+
+.pay-container a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: var(--fwB);
+}
+.why-container{
+    background-color: var(--cardthree);
+    padding: 2rem 1.5rem;
+}
+
+.why-container p{
+    width: 75%;
+    color: var(--lightgray);
+    opacity: 75%;
+    line-height: 1.45rem;
+    font-weight: var(--fwL);
+}
+
+@media (min-width:1000px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 60%;
+    }
+    .intro-container{
+        flex:1 1 100%;
+        padding: 3rem;
+    }
+
+    .pay-container{
+        flex: 1 1 50%;
+        padding: 3rem;
+    }
+    .why-container{
+        flex: 1 1 50%;
+        padding: 3rem;
+    }
+}
